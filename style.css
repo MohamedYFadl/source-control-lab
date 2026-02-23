@@ -1,0 +1,93 @@
+.landing {
+    position: relative;
+}
+
+.landing::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: -40px;
+    left: 0;
+    Z-INDEX: -1;
+    background-color: #ECECEC;
+    transform: skewY(-6deg);
+    transform-origin: top left;
+
+}
+
+.landing .container {
+    min-height: calc(100vh - 72px);
+    display: flex;
+    align-items: center;
+    padding-bottom: 120px;
+}
+
+.landing .container img {
+    width: 600px;
+    position: relative;
+    animation: up-and-down 5s linear infinite;
+}
+
+@media (max-width:991px) {
+    .landing .container .image {
+        display: none;
+    }
+}
+
+.landing .container .text {
+    flex: 1;
+}
+
+@media (max-width:991px) {
+    .landing .container .text {
+        text-align: center;
+    }
+}
+
+.landing .container .text h1 {
+    font-size: 40px;
+    letter-spacing: -2px;
+    margin: 0;
+
+}
+
+@media (max-width:767px) {
+    .landing .container .text h1 {
+        font-size: 28px
+    }
+}
+
+.landing .container .text p {
+    font-size: 24px;
+    line-height: 1.7;
+    margin: 5px 0 0;
+    color: #666;
+    max-width: 500px;
+}
+
+@media (max-width:991px) {
+    .landing .container .text p {
+        font-size: 18px;
+        margin: 10px auto;
+    }
+}
+
+.landing .go-down {
+    color: var(--main-color);
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: var(--main-transition);
+    position: relative;
+}
+
+.landing .go-down:hover {
+    color: var(--main-color-alt);
+}
+
+.landing .go-down i {
+    animation: bouncing 1.5s infinite;
+}
+
+/* End Landing */
